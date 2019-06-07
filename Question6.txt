@@ -1,0 +1,3 @@
+db.bioinf_mongo_examen.find({"method_of_admission.0":"GEL;DENTAL"},{drug:1}).count()
+
+1
