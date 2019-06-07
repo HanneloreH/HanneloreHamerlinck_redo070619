@@ -1,0 +1,9 @@
+SELECT count(gene_id),chromosome FROM gene WHERE description LIKE '%cancer%' GROUP BY chromosome ORDER BY count(gene_id) DESC LIMIT 1 OFFSET 1;
+
++----------------+------------+| count(gene_id) | chromosome |+----------------+------------+| 5 | 9 |+----------------+------------+1 row in set (0,03 sec)
+
+
+SELECT count(exon.exon_id) FROM gene JOIN transcript ON gene.gene_id = transcript.gene_id JOIN exon_transcript ON transcript.transcript_id = exon_transcript.transcript_id JOIN exon ON exon.exon_id = exon_transcript.exon_id GROUP BY chromosome HAVING chromosome=2;
+
+
++---------------------+| count(exon.exon_id) |+---------------------+| 92228 |+---------------------+1 row in set, 220 warnings (2,23 sec)
