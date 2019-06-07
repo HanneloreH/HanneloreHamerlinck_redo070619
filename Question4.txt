@@ -1,0 +1,4 @@
+SELECT gene_name, (seq_region_end - seq_region_start) AS size FROM gene ORDER BY size LIMIT 1;
+
+
++-----------+------+| gene_name | size |+-----------+------+| TRDD1 | 7 |+-----------+------+1 row in set (0,05 sec)
