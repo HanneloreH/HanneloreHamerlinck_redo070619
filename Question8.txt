@@ -1,0 +1,14 @@
+1) Look for ID of the gene
+curl 'https://rest.ensembl.org/xrefs/symbol/mouse/NOTCH1' -H 'Content-type:text'
+
+<html><title>EnsEMBL::REST</title><body><pre>--- - id: ENSMUSG00000026923type: gene
+
+
+2) Using Ensembl via https://www.ensembl.org look for the location: ENSMUSG00000026923
+-> location: Chromosome 2: 26,457,903-26,516,663 reverse
+
+
+3) Search the sequence
+curl 'http://rest.ensembl.org/sequence/region/mouse/2:26457903..26458003:1/?format:fasta' -H 'Content-Type:text/x-fasta'
+
+>chromosome:GRCm38:2:26457903:26458003:1TTTAGCAAAATGTGGACAACCATCAGTATCATTTTTATTGCAAATTAGTTAACAAAAAAAGATGAAAAAAATACATCATTTTCATTACCTACAGTTTTGCA
