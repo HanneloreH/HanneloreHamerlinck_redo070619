@@ -1,0 +1,20 @@
+Question2 : normalising data dental practice
+
+0NF: 
+dentist(staffNo, dentistName, patientNo, patientName, (appointment_date, appointment_time), surgeryNo)
+
+1NF:
+dentist(staffNo, dentistName, patientNo, patientName, (appointment_date, appointment_time), surgeryNo)
+keys:(StaffNo, PatientNo, appointment_date)
+
+2NF:
+Staff(staffNo, dentistName)
+Patient(patientNo, patientName)
+Appointment( staffNo, patientNo, appointment_date, appointment_time, surgeryNo)
+keys(staffno , patientNo, patientNo&appointment_date)
+
+3NF:
+Staff(staffNo, dentistName)
+Patient(patientNo, patientName)
+Appointment( staffNo, patientNo, appointment_date, appointment_time, surgeryNo)
+keys(staffno , patientNo, patientNo&appointment_date)
