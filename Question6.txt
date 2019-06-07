@@ -1,3 +1,10 @@
-db.bioinf_mongo_examen.find({"method_of_admission.0":"GEL;DENTAL"},{drug:1}).count()
+Count number of medicines:
+db.bioinf_mongo_examen.find({method_of_admission:"GEL;DENTAL"},{drug:1}).count()
 
 1
+
+
+Name of drug:
+db.bioinf_mongo_examen.find({method_of_admission:"GEL;DENTAL"},{drug:1})
+
+{ "_id" : ObjectId("588878f14ffaac26108556b0"), "drug" : "AQUASOL A" }
