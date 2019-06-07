@@ -1,0 +1,11 @@
+db.bioinf_mongo_examen.aggregate( [ { $group: { _id: "$company", PercSide: { $avg: "$percentage_of_side_effects" } } }, { $match: { PercSide: { $gte: 10 } } } , {$sort:{PercSide:-1}}] )
+
+{ "_id" : "Galderma Laboratories, L.P.", "PercSide" : 11.5 }
+{ "_id" : "Watson Pharmaceuticals, Inc.", "PercSide" : 10.65 }
+{ "_id" : "Durata Therapeutics, Inc.", "PercSide" : 10.5 }
+{ "_id" : "Shire US, Inc.", "PercSide" : 10 }
+{ "_id" : "Oasis Medical, Inc.", "PercSide" : 10 }
+{ "_id" : "Bayer Healthcare Consumer Care", "PercSide" : 10 }
+{ "_id" : "Cardinal Health", "PercSide" : 10 }
+{ "_id" : "Novo Nordisk", "PercSide" : 10 }
+
